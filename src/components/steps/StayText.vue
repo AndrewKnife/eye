@@ -8,7 +8,7 @@
         a 37,37 0 1,1 74,0
         a 37,37 0 1,1 -74,0"/>
     </defs>
-    <text font-weight="700" font-family="Telegraf" letter-spacing="1px" font-size="10px">
+    <text font-weight="700" font-family="Telegraf" letter-spacing="1px" font-size="10px" color="black">
       <textPath xlink:href="#circlestand">
         {{ t('label_dont_move') }}
       </textPath>

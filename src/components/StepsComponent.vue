@@ -7,7 +7,7 @@
             <img id="stepImage" :src="stepsImage" class="h-full w-full object-contain"/>
           </div>
           <div class="absolute inset-0">
-            <WatchText/>
+            <WatchText id="eyeImage" class="opacity-0"/>
           </div>
           <div class="absolute inset-0">
             <img id="standImage" :src="stepsStandImage" class="h-full w-full opacity-0 object-contain"/>

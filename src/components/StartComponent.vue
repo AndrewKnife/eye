@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="absolute inset-0">
+    <div class="absolute left-0 right-0 bottom-0 top-[5%]">
       <div class="w-full scale-[115%] h-full absolute transition-all" :style="{left: `${leftPos}%`, top: `${topPos}%`}">
         <div class="absolute inset-0">
           <IconFullStart class="h-full aspect-square mx-auto flex items-center"/>

@@ -1,6 +1,6 @@
 <template>
-  <button class="giga:text-6xl text-2xl flex items-center">
-    <PointIcon class="giga:w-[7rem] giga:h-[5rem] w-[4rem] h-[3rem] giga:mr-10 mr-5"/>
+  <button class="giga:text-5xl text-xl flex items-center">
+    <PointIcon class="giga:w-[7rem] giga:h-[5rem] w-[3rem] h-[3rem] giga:mr-10 mr-5"/>
     <slot></slot>
   </button>
 </template>

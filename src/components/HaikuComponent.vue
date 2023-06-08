@@ -5,12 +5,14 @@
            :style="{'background-image': `url(Participants/${imageSource}/doc_viz-${locale}.jpg)`}">
       </div>
     </div>
-    <PointButton @click="$emit('repeat')" class="absolute left-[10%] giga:left-[10%]">{{ t('button_repeat') }}
-    </PointButton>
-    <PointButton @click="$emit('next')" class="absolute left-[70%] giga:left-[74%]">{{
-        t('button_analyze_further')
-      }}
-    </PointButton>
+    <div class="absolute left-[15%] right-[10%] giga:left-[10%] flex justify-between top-0 bottom-0">
+      <PointButton @click="$emit('repeat')">
+        {{ t('button_repeat') }}
+      </PointButton>
+      <PointButton @click="$emit('next')">
+        {{ t('button_analyze_further') }}
+      </PointButton>
+    </div>
   </div>
 </template>
 <script setup>

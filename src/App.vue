@@ -11,14 +11,14 @@
                               @back="() => blinkEye(TAB_KEYS.start)"/>
         <AgeComponent class="perfect-center" v-if="activeTab === TAB_KEYS.age"
                       @back="() => blinkEye(TAB_KEYS.start)"
-                      @next="() => blinkEye(TAB_KEYS.terms)"
+                      @next="handleTermsNavigation"
                       v-model="ageAgreement"/>
-        <TermsOfService class="perfect-center" v-if="activeTab === TAB_KEYS.terms"
-                        @back="() => blinkEye(TAB_KEYS.age)"
-                        @next="handleTermsNavigation"/>
         <TermsOfServiceParent class="perfect-center" v-if="activeTab === TAB_KEYS.termsParent"
                               @back="() => blinkEye(TAB_KEYS.age)"
-                              @next="() => blinkEye(TAB_KEYS.steps)"/>
+                              @next="() => blinkEye(TAB_KEYS.terms)"/>
+        <TermsOfService class="perfect-center" v-if="activeTab === TAB_KEYS.terms"
+                        @back="() => blinkEye(TAB_KEYS.age)"
+                        @next="() => blinkEye(TAB_KEYS.steps)"/>
         <StepsComponent class="perfect-center" v-if="activeTab === TAB_KEYS.steps"
                         @next="() => blinkEye(TAB_KEYS.scanner)"/>
         <ScannerComponent class="perfect-center" v-if="activeTab === TAB_KEYS.scanner"
@@ -88,7 +88,7 @@ const blinkAndScan = (nextPage) => {
 
 const handleTermsNavigation = () => {
   if (ageAgreement.value === 'yes') {
-    blinkAndScan(TAB_KEYS.steps)
+    blinkAndScan(TAB_KEYS.terms)
   } else {
     blinkAndScan(TAB_KEYS.termsParent)
   }

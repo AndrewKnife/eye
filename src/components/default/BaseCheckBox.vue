@@ -1,6 +1,6 @@
 <template>
-  <label class="flex items-center cursor-pointer overflow-visible">
-    <input type="checkbox" @change="$emit('update:modelValue', $event.target.checked)"/>
+  <label class="flex items-center cursor-pointer overflow-visible" :class="{'opacity-60': !!disabled}">
+    <input :disabled="disabled" type="checkbox" @change="$emit('update:modelValue', $event.target.checked)"/>
     <span class="relative">
       <div class="check-content">
         <CheckIcon class="w-12 h-12 giga:w-20 giga:h-20 absolute -left-2 right-0 -top-4"/>
@@ -15,8 +15,15 @@
 import CheckIcon from '/src/assets/icons/check.svg?component'
 
 defineEmits(['update:modelValue'])
+
+defineProps({disabled: Boolean})
 </script>
 <style scoped>
+
+#nothing {
+  @apply opacity-70;
+}
+
 :root {
   --checkbox-color: grey;
   --checkmark-color: white;
@@ -55,7 +62,7 @@ input {
   @apply hidden;
 }
 
-input:checked ~span .check-content {
+input:checked ~ span .check-content {
   @apply block;
 }
 

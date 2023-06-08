@@ -28,12 +28,14 @@
         </div>
       </div>
     </div>
-    <PointButton @click="$emit('back')" class="absolute left-[10%] giga:left-[10%]">
-      {{ t('button_back') }}
-    </PointButton>
-    <PointButton @click="$emit('repeat')" class="absolute left-[70%] giga:left-[74%]">
-      {{ t('button_repeat') }}
-    </PointButton>
+    <div class="absolute left-[15%] right-[15%] giga:left-[10%] flex justify-between top-0 bottom-0">
+      <PointButton @click="$emit('back')">
+        {{ t('button_back') }}
+      </PointButton>
+      <PointButton @click="$emit('repeat')">
+        {{ t('button_repeat') }}
+      </PointButton>
+    </div>
   </div>
 </template>
 <script setup>

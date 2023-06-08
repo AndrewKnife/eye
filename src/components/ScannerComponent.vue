@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <img :src="grafika" class="perfect-center mx-auto h-[90%] mt-[4%] spinning">
+    <div class="perfect-center flex justify-center items-center">
+      <svg viewBox="0 0 100 100" class="w-[6%] mt-[4%] spinning-back">
+        <defs>
+          <path id="circle"
+                d="
+        M 50, 50
+        m -37, 0
+        a 37,37 0 1,1 74,0
+        a 37,37 0 1,1 -74,0"/>
+        </defs>
+        <text font-size="18" font-weight="700">
+          <textPath xlink:href="#circle">
+            Tavo rainelė analizuojama
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+</template>
+<script setup>
+import grafika from "@/assets/images/rainele_grafika.png";
+
+const emit = defineEmits(['next'])
+
+setTimeout(() => {
+  emit('next')
+}, 6000)
+</script>
+<style scoped>
+.perfect-center {
+  @apply absolute inset-10;
+}
+
+.spinning {
+  animation: spin 110s linear infinite;
+}
+
+.spinning-back {
+  animation: spin 110s linear infinite;
+  animation-direction: reverse;
+}
+</style>
+

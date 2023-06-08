@@ -1,0 +1,21 @@
+{
+  "start_button_information": "Information",
+  "start_button_start": "Start",
+  "start_button_en": "EN",
+  "start_button_lt": "LT",
+  "title_start": "Iškoduok savo tapatybę",
+  "age_title": "Ar tu legalus?",
+  "age_p_one": "Manau ",
+  "age_p_two": "Ar tu legalus?",
+  "age_question_label": "Ar tau yra 18 metų?",
+  "age_yes_button": "Yes",
+  "age_no_button": "No",
+  "title_terms_of_service": "Servicų termsai",
+  "check_agree_to_terms": "Sutikti su viskuom",
+  "button_back": "Back",
+  "button_next": "Next",
+  "label_stand_next_to_line": "Atsistok prie linijos",
+  "label_dont_move": "Nejudėk",
+  "button_repeat": "Repeat",
+  "button_analyze_further": "Analizuoti daugiau"
+}

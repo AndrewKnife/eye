@@ -1,0 +1,9 @@
+<svg class="svgwave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 301 21">
+    <path id="wavepath" d="M 112 236 Q 87 78 162 131 Q 241 193 268 143 Q 348 -13 373 43 Q 505 271 385 251 Q 263 253 405 346 Q 479 453 342 403 Q 152 257 225 368 Q 284 530 72 388 Q -15 272 70 299 Q 159 306 112 236"></path>
+    <text class="svgText" text-anchor="middle">
+        <textPath class="my-text" href="#wavepath" startOffset="50%">
+            <animate attributeName="startOffset" from="-50%" to="150%" begin="0s" dur="30s" repeatCount="indefinite"></animate>
+            Art is a thing that makes you think weird things. And those weird things are something that makes you go: what the hell am I thinking? Art is also something that I can't really explain and you will have to figure out for yourself
+        </textPath>
+    </text>
+</svg>

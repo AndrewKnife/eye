@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 604.32 367.54">
+  <defs>
+    <style>
+      .bm {
+        fill: url(#bambam-gradient-2);
+      }
+
+      .val {
+        font-family: Telegraf-Regular, 'Telegraf Regular';
+        font-size: 30px;
+      }
+
+      .alksdm {
+        fill: url(#bambam-gradient);
+      }
+
+      .dqwtfgqwf {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+    </style>
+    <linearGradient id="bambam-gradient" x1="8.38" y1="133.5" x2="245.65" y2="133.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cfe1f9"/>
+      <stop offset="1" stop-color="#dfedd6"/>
+    </linearGradient>
+    <linearGradient id="bambam-gradient-2" x1="367.05" y1="131.27" x2="604.32" y2="131.27" xlink:href="#bambam-gradient"/>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <text class="val" transform="translate(12.74 26.96) rotate(-3.42)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(19.05 26.59) rotate(-3.01)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(25.36 26.26) rotate(-2.61)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(31.68 25.97) rotate(-2.23)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(38.01 25.72) rotate(-1.86)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(44.33 25.52) rotate(-1.48)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(50.66 25.35) rotate(-1.11)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(56.97 25.23) rotate(-.73)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(63.32 25.15) rotate(-.35)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(69.63 25.11) rotate(.04)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(75.96 25.11) rotate(.44)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(82.3 25.16) rotate(.85)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(88.6 25.25) rotate(1.27)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(94.93 25.39) rotate(1.7)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(101.24 25.58) rotate(2.15)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(107.57 25.82) rotate(2.62)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(113.88 26.11) rotate(3.1)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(120.18 26.45) rotate(3.61)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(126.49 26.84) rotate(4.14)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(132.77 27.3) rotate(4.7)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(139.07 27.82) rotate(5.28)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(145.34 28.4) rotate(5.9)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(151.61 29.04) rotate(6.54)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(157.87 29.76) rotate(7.23)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(164.11 30.55) rotate(7.96)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(170.34 31.42) rotate(8.74)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(176.55 32.37) rotate(9.57)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(182.7 33.34) rotate(11.18)"><tspan x="0" y="0">P</tspan></text>
+      <text class="val" transform="translate(197.71 36.34) rotate(13.24)"><tspan x="0" y="0">r</tspan></text>
+      <text class="val" transform="translate(207.23 38.6) rotate(14.86)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(213.85 40.23) rotate(17.49)"><tspan x="0" y="0">d</tspan></text>
+      <text class="val" transform="translate(229.61 45.19) rotate(21.84)"><tspan x="0" y="0">ė</tspan></text>
+      <text class="val" transform="translate(243.17 50.59) rotate(26.98)"><tspan x="0" y="0">k</tspan></text>
+      <text class="val" transform="translate(255.3 56.9) rotate(31.51)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(260.46 59.79) rotate(37.15)"><tspan x="0" y="0">a</tspan></text>
+      <text class="val" transform="translate(271.4 67.94) rotate(46.87)"><tspan x="0" y="0">k</tspan></text>
+      <text class="val" transform="translate(280.64 78.16) rotate(56.14)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(284.34 83.23) rotate(64.99)"><tspan x="0" y="0">s</tspan></text>
+      <text class="val" transform="translate(288.9 93.36) rotate(73.93)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(290.98 98.46) rotate(85.02)"><tspan x="0" y="0">p</tspan></text>
+      <text class="val" transform="translate(292.08 114.55) rotate(96.13)"><tspan x="0" y="0">r</tspan></text>
+      <text class="val" transform="translate(291.01 123.9) rotate(102.02)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(289.89 130.29) rotate(108.35)"><tspan x="0" y="0">e</tspan></text>
+      <text class="val" transform="translate(285.09 144.13) rotate(113.04)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(282.71 149.8) rotate(115.29)"><tspan x="0" y="0">r</tspan></text>
+      <text class="val" transform="translate(278.69 158.39) rotate(117.41)"><tspan x="0" y="0">a</tspan></text>
+      <text class="val" transform="translate(272.04 171.12) rotate(118.52)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(268.73 177.24) rotate(119.18)"><tspan x="0" y="0">n</tspan></text>
+      <text class="val" transform="translate(260.61 191.75) rotate(119.37)"><tspan x="0" y="0">e</tspan></text>
+      <text class="val" transform="translate(253.25 204.83) rotate(119.12)"><tspan x="0" y="0">l</tspan></text>
+      <text class="val" transform="translate(249.81 211) rotate(118.81)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(246.44 217.06) rotate(118.02)"><tspan x="0" y="0">ų</tspan></text>
+      <text class="val" transform="translate(238.75 231.6) rotate(116.93)"><tspan x="0" y="0"> </tspan></text>
+      <text class="val" transform="translate(235.73 237.47) rotate(115.74)"><tspan x="0" y="0">s</tspan></text>
+      <text class="val" transform="translate(230.34 248.59) rotate(113.48)"><tspan x="0" y="0">k</tspan></text>
+      <text class="val" transform="translate(224.19 262.75) rotate(109.77)"><tspan x="0" y="0">a</tspan></text>
+      <text class="val" transform="translate(219.14 277.21) rotate(105.93)"><tspan x="0" y="0">i</tspan></text>
+      <text class="val" transform="translate(216.93 284.83) rotate(101.83)"><tspan x="0" y="0">t</tspan></text>
+      <text class="val" transform="translate(214.38 296.73) rotate(93.17)"><tspan x="0" y="0">y</tspan></text>
+      <text class="val" transform="translate(213.93 314.01) rotate(79.27)"><tspan x="0" y="0">t</tspan></text>
+      <text class="val" transform="translate(217.14 329.1) rotate(55.83)"><tspan x="0" y="0">u</tspan></text>
+      <text class="val" transform="translate(230.82 346.31) rotate(31.78)"><tspan x="0" y="0">v</tspan></text>
+      <text class="val" transform="translate(245.54 355.01) rotate(18.75)"><tspan x="0" y="0">o</tspan></text>
+    </g>
+    <g>
+      <path class="dqwtfgqwf" d="m166.03,14l-13.77-1.35-6.71-.67c.73.07,1.4-.47,1.47-1.22l.12-1.24c.16-1.58-.99-3-2.55-3.16l-14.47-1.45c-1.56-.16-2.97,1.01-3.13,2.59l-2.27,22.73c-.16,1.58.99,3,2.55,3.16l8.93.89,13.76,1.38,1.5.15c1.56.16,2.97-1.01,3.13-2.59l.15-1.52c.02-.22-.01-.44-.09-.64-.19-.48-.14-1.02.15-1.46.12-.18.19-.38.21-.61l.3-3.05c.02-.22-.01-.44-.09-.64-.19-.48-.14-1.02.15-1.46.12-.18.19-.38.21-.61l.3-3.05c.07-.74-.47-1.41-1.2-1.49l10.76,1.05c1.56.16,2.97-1.01,3.13-2.59h0c.16-1.58-.99-3-2.55-3.16Z"/>
+      <line class="dqwtfgqwf" x1="151.48" y1="24.03" x2="155.51" y2="24.43"/>
+      <line class="dqwtfgqwf" x1="150.89" y1="29.96" x2="154.92" y2="30.37"/>
+      <line class="dqwtfgqwf" x1="141.91" y1="11.59" x2="145.95" y2="11.99"/>
+      <rect x="117.13" y="7.6" width="8.94" height="23.48" rx="2.35" ry="2.35" transform="translate(2.53 -12) rotate(5.71)"/>
+      <line class="dqwtfgqwf" x1="151.88" y1="18.42" x2="155.91" y2="18.82"/>
+    </g>
+    <path class="alksdm" d="m245.65,133.5s-48.73,65.87-115.58,65.87c-76.66,0-121.69-66.55-121.69-66.55,0,0,48.92-65.19,121.69-65.19s115.58,65.87,115.58,65.87Z"/>
+    <path class="bm" d="m604.32,131.27s-48.73,65.87-115.58,65.87c-76.66,0-121.69-66.55-121.69-66.55,0,0,48.92-65.19,121.69-65.19s115.58,65.87,115.58,65.87Z"/>
+    <circle cx="127.01" cy="133.5" r="37.97"/>
+    <circle cx="485.69" cy="131.27" r="37.97"/>
+  </g>
+</svg>

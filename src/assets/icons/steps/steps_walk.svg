@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="kakaka" data-name="ploplplpol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 970.4 244.34">
+  <defs>
+    <style>
+      .steps-1 {
+        fill: url(#steps-gradient-2);
+      }
+
+      .steps-2 {
+        fill: url(#steps-gradient-6);
+      }
+
+      .steps-3 {
+        fill: url(#steps-gradient-5);
+      }
+
+      .steps-4 {
+        fill: url(#steps-gradient-7);
+      }
+
+      .steps-5 {
+        fill: url(#steps-gradient-3);
+      }
+
+      .steps-6 {
+        fill: url(#steps-gradient);
+      }
+
+      .steps-7 {
+        fill: url(#steps-gradient-4);
+      }
+
+      .steps-8 {
+        fill: url(#steps-gradient-8);
+      }
+    </style>
+    <linearGradient id="steps-gradient" x1="0" y1="108.21" x2="51.39" y2="108.21" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#cfe1f9"/>
+      <stop offset="1" stop-color="#dfedd6"/>
+    </linearGradient>
+    <linearGradient id="steps-gradient-2" x1="-103.05" y1="1087.2" x2="-52.54" y2="1087.2" gradientTransform="translate(152.58 -984.49)" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-3" x1="340.06" y1="108.21" x2="391.45" y2="108.21" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-4" x1="151.21" y1="-648.65" x2="201.73" y2="-648.65" gradientTransform="translate(145.71 753.09)" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-5" x1="545.2" x2="596.59" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-6" x1="374.91" y1="1349.49" x2="425.43" y2="1349.49" gradientTransform="translate(219.82 -1246.77)" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-7" x1="895.83" y1="108.21" x2="947.22" y2="108.21" xlink:href="#steps-gradient"/>
+    <linearGradient id="steps-gradient-8" x1="872.49" y1="51.78" x2="923.01" y2="51.78" gradientTransform="translate(-48.64 56.43)" xlink:href="#steps-gradient"/>
+  </defs>
+  <g id="steps-layer">
+    <rect x="14.71" y="208.89" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(42.91 448.39) rotate(180)"/>
+    <rect x="14.71" y="224.47" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(89.28 464.65) rotate(180)"/>
+    <rect x="125.43" y="187.69" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(345.71 317.36) rotate(151.24)"/>
+    <rect x="126.55" y="191.22" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(389.42 298.32) rotate(151.24)"/>
+    <rect class="steps-6" y="0" width="51.39" height="216.42" rx="12" ry="12"/>
+    <rect class="steps-1" x="49.53" y="-5.5" width="50.51" height="216.42" rx="12" ry="12" transform="translate(-40.19 48.65) rotate(-28.76)"/>
+    <rect x="354.78" y="208.89" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(723.04 448.39) rotate(180)"/>
+    <rect x="354.78" y="224.47" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(769.41 464.65) rotate(180)"/>
+    <rect x="267.2" y="194.12" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(429.96 516.93) rotate(-154.3)"/>
+    <rect x="261.33" y="219.06" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(455.28 557.7) rotate(-154.3)"/>
+    <rect class="steps-5" x="340.06" y="0" width="51.39" height="216.42" rx="12" ry="12"/>
+    <rect class="steps-7" x="296.93" y="-3.78" width="50.51" height="216.42" rx="12" ry="12" transform="translate(77.18 -129.4) rotate(25.7)"/>
+    <rect x="559.91" y="208.89" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(1133.31 448.39) rotate(180)"/>
+    <rect x="559.91" y="224.47" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(1179.68 464.65) rotate(-180)"/>
+    <rect x="670.63" y="187.69" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(1368.87 55.07) rotate(151.24)"/>
+    <rect x="671.74" y="191.22" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(1412.58 36.03) rotate(151.24)"/>
+    <rect class="steps-3" x="545.2" y="0" width="51.39" height="216.42" rx="12" ry="12"/>
+    <rect class="steps-2" x="594.73" y="-5.5" width="50.51" height="216.42" rx="12" ry="12" transform="translate(27.04 310.93) rotate(-28.76)"/>
+    <rect x="910.54" y="208.89" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(1834.57 448.39) rotate(180)"/>
+    <rect x="910.54" y="224.47" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(1880.94 464.65) rotate(180)"/>
+    <rect x="844.44" y="208.42" width="13.49" height="30.61" rx="6.74" ry="6.74" transform="translate(1702.36 447.46) rotate(-180)"/>
+    <rect x="844.44" y="224.13" width="59.86" height="15.71" rx="7.86" ry="7.86" transform="translate(1748.73 463.97) rotate(-180)"/>
+    <rect class="steps-4" x="895.83" y="0" width="51.39" height="216.42" rx="12" ry="12"/>
+    <rect class="steps-8" x="823.85" y="0" width="50.51" height="216.42" rx="12" ry="12"/>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Telegraf;
+    src: url(../assets/fonts/Telegraf-Regular.ttf);
+}
+
+body {
+    font-family: Telegraf;
+}
+
+svg {
+    shape-rendering: optimizeSpeed;
+}
+
+svg.svgwave {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+svg.svgwave path,
+svg.svgwave polyline {
+    fill: transparent;
+    stroke: red;
+    stroke-width: 1px;
+}
+
+svg.svgwave text {
+    font-size: 20px;
+    fill: black;
+}
+
+text {
+    transition: all linear 1s;
+    animation-timing-function: linear;
+}
+
+.background-color {
+    background-image: linear-gradient(0.25turn, #cfe1f9, #dfedd6) !important;
+}
+
+.transition-opacity {
+    transition: opacity 1s;
+}

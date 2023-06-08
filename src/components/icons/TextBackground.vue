@@ -101,7 +101,7 @@ const opacityTrain = () => {
         if (i > 100) {
           fields[i - 101].setAttribute('style', `opacity: 0`)
         }
-        setTimeout(runTrain, 70)
+        setTimeout(runTrain, 60)
       }
     }
     runTrain()

@@ -7,7 +7,7 @@
             <img id="stepImage" :src="stepsImage" class="h-full w-full object-contain"/>
           </div>
           <div class="absolute inset-0">
-            <Akys id="eyeImage" class="h-full opacity-0 w-full"/>
+            <WatchText/>
           </div>
           <div class="absolute inset-0">
             <img id="standImage" :src="stepsStandImage" class="h-full w-full opacity-0 object-contain"/>
@@ -24,8 +24,8 @@
 import {ref, watch} from "vue";
 import stepsImage from "../assets/images/steps_walk.png";
 import stepsStandImage from "../assets/images/steps_Stand.png";
-import Akys from "../assets/icons/steps/akys_top_icon.svg?component";
 import StepProgress from "./default/StepProgress.vue";
+import WatchText from "./steps/WatchText.vue";
 
 const emit = defineEmits(['next'])
 

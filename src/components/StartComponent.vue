@@ -1,24 +1,28 @@
 <template>
   <div>
     <div class="absolute inset-0">
-      <div class="w-full h-full absolute transition-all" :style="{left: `${leftPos}%`, top: `${topPos}%`}">
-        <IconFullStart class="w-full h-full mx-auto"/>
+      <div class="w-full scale-[115%] h-full absolute transition-all" :style="{left: `${leftPos}%`, top: `${topPos}%`}">
+        <div class="absolute inset-0">
+          <IconFullStart class="h-full aspect-square mx-auto flex items-center"/>
+        </div>
         <div class="perfect-center flex items-center justify-center">
-          <button @click="$emit('start')" class="h-[20%] aspect-square mt-[6%] hover:scale-105 transition-all">
+          <button @click="$emit('start')" class="h-[18%] aspect-square mt-[0%] ml-[1%] hover:scale-105 transition-all">
             <StartIcon/>
           </button>
         </div>
       </div>
     </div>
-    <PointButton @click="$emit('information')" class="absolute right-[20%] -rotate-[30deg] bottom-[12%] scale-75">
-      {{ t('start_button_information') }}
-    </PointButton>
-    <PointButton @click="handleLTClick" class="absolute right-[15%] -rotate-[35deg] bottom-[25%] scale-75">
-      {{ t('start_button_lt') }}
-    </PointButton>
-    <PointButton @click="handleENClick" class="absolute right-[9%] -rotate-[40deg] bottom-[36%] scale-75">
-      {{ t('start_button_en') }}
-    </PointButton>
+    <div class="absolute right-[10%] -rotate-[37deg] bottom-[24%] scale-75 flex justify-center">
+      <PointButton @click="$emit('information')" class="px-5">
+        {{ t('start_button_information') }}
+      </PointButton>
+      <PointButton @click="handleLTClick" class="px-5">
+        {{ t('start_button_lt') }}
+      </PointButton>
+      <PointButton @click="handleENClick" class="px-5">
+        {{ t('start_button_en') }}
+      </PointButton>
+    </div>
   </div>
 </template>
 <script setup>

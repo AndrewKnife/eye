@@ -2,8 +2,8 @@
   <div>
     <div class="w-full h-full flex justify-center items-center">
       <div class="w-4/12">
-        <div class="text-lg h-[45vh] mt-14 overflow-y-auto font-medium giga:text-4xl flex items-center">
-          <h1 class="text-3xl m-auto giga:text-6xl">{{ t('age_title') }}</h1>
+        <div class="text-lg h-[45vh] mt-14 overflow-y-auto font-medium giga:text-4xl flex flex-col items-center justify-center">
+          <h1 class="text-3xl giga:text-6xl margin-auto">{{ t('age_title') }}</h1>
         </div>
         <div class="w-full">
           <div class="flex justify-between">

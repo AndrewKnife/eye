@@ -1,8 +1,8 @@
 <template>
   <div>
-    <img :src="grafika" class="perfect-center mx-auto h-[90%] mt-[4%] spinning">
+    <img :src="grafika" class="perfect-center m-auto h-[90%] spinning">
     <div class="perfect-center flex justify-center items-center">
-      <svg viewBox="0 0 100 100" class="w-[6%] mt-[4%] spinning-back">
+      <svg viewBox="0 0 100 100" class="w-[6%] spinning-back">
         <defs>
           <path id="circle"
                 d="
@@ -13,7 +13,7 @@
         </defs>
         <text font-size="18" font-weight="700">
           <textPath xlink:href="#circle">
-            Tavo rainelė analizuojama
+            {{ t('checking_pupil') }}
           </textPath>
         </text>
       </svg>
@@ -21,9 +21,12 @@
   </div>
 </template>
 <script setup>
-import grafika from "@/assets/images/rainele_grafika.png";
+import grafika from "@/assets/images/rainele_grafika_NEW.png";
+import {useI18n} from "vue-i18n";
 
 const emit = defineEmits(['next'])
+
+const {t} = useI18n()
 
 setTimeout(() => {
   emit('next')

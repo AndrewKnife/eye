@@ -1,14 +1,8 @@
 <template>
   <div>
-    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-         viewBox="0 0 1874.2 1183.16" class="w-full h-full">
-      <g id="Layer_1-2">
-        <image width="1920" height="1244" transform="translate(179.71 193.28) scale(.8)"
-               xlink:href="/src/assets/images/rainele_grafika.png"/>
-      </g>
-    </svg>
-    <div class="w-full h-full">
-      <svg viewBox="0 0 100 100" class="absolute top-[1%] bottom-0 left-[22%] right-[22%]">
+    <img class="object-contain object-center h-full aspect-square p-[15%]" src="/src/assets/images/rainele_grafika_NEW.png"/>
+    <div class="h-full aspect-square absolute inset-0 m-auto">
+      <svg viewBox="0 0 100 100" class="h-full m-auto">
         <defs>
           <path stroke="black" id="circlerainel"
                 d="

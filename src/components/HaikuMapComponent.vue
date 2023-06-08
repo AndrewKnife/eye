@@ -68,7 +68,9 @@ const convertCoordinates = (number) => {
 onMounted(() => {
   const scrollableMap = document.getElementById('scrollableMap');
   const centerItem = document.getElementById('centerItem');
-  scrollableMap.scrollTo(centerItem.offsetLeft - 350, centerItem.offsetTop - 350)
+  if (centerItem) {
+    scrollableMap.scrollTo(centerItem.offsetLeft - 350, centerItem.offsetTop - 350)
+  }
 })
 </script>
 <style scoped>

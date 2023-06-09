@@ -19,18 +19,19 @@
       <PointButton @click="handleLTClick" class="px-5">
         {{ t('start_button_lt') }}
       </PointButton>
-      <PointButton @click="handleENClick" class="px-5">
-        {{ t('start_button_en') }}
-      </PointButton>
+      <!--      <PointButton @click="handleENClick" class="px-5">-->
+      <!--        {{ t('start_button_en') }}-->
+      <!--      </PointButton>-->
     </div>
   </div>
 </template>
 <script setup>
+import {ref} from "vue";
+import {useI18n} from "vue-i18n";
 import IconFullStart from "@/components/icons/full/IconFullStart.vue";
 import StartIcon from "@/components/icons/full/StartIcon.vue";
 import PointButton from "@/components/default/PointButton.vue";
-import {ref} from "vue";
-import {useI18n} from "vue-i18n";
+import {randomInteger} from "@/utls/randomInteger";
 
 defineEmits(['start', 'information'])
 
@@ -55,15 +56,6 @@ const setPositions = (left, top) => {
 const resetPositions = () => {
   leftPos.value = 0
   topPos.value = 0
-}
-
-function randomInteger(pMin = 1, pMax) {
-  if (pMax < pMin) {
-    let t = pMin;
-    pMin = pMax;
-    pMax = t;
-  }
-  return Math.floor(Math.random() * (pMax + 1 - pMin) + pMin);
 }
 
 const randomizePosition = () => {

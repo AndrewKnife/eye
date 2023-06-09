@@ -29,7 +29,7 @@
                            @repeat="() => blinkEye(TAB_KEYS.start)" @back="() => blinkEye(TAB_KEYS.haiku)"/>
       </div>
     </div>
-    <div v-if="textBgActive" class="absolute -inset-[5%] overflow-hidden anim-opacity">
+    <div v-if="textBgActive" class="absolute inset-0 overflow-hidden anim-opacity">
       <TextBackground class="w-full"/>
     </div>
   </div>

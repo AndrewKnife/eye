@@ -1,7 +1,7 @@
 <template>
   <svg version="1.1" id="koldunas" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
        viewBox="0 0 1474.3 995.1" style="enable-background:new 0 0 1474.3 995.1;">
-    <path id="pupuilasonas" fill="none" stroke-linejoin="round" d="M148.4,395.5c15.3-26.4,4.2-59.7-18.6-80.1c-22.7-20.4-52.3-35.7-64.4-63.7c-12.9-29.9,1.6-68.8,31-82.9
+    <path id="pupuilasonas" transform="scale(0.8)" fill="none" stroke-linejoin="round" d="M148.4,395.5c15.3-26.4,4.2-59.7-18.6-80.1c-22.7-20.4-52.3-35.7-64.4-63.7c-12.9-29.9,1.6-68.8,31-82.9
 		c29.4-14.1,68.8-1.1,84,27.7c19.1,36.1,0.5,81.3,10.4,121c7.5,29.9,30.3,53.4,54.1,73.1c124.1,103.1,299,141.6,455,100.2
 		c27.3-7.3,57.3-19.8,67.2-46.3c12-32.1-12.3-67-41-85.7c-102.5-66.9-247.2-11.6-357-65.8c-25.6-12.6-49.1-32-59.8-58.4
 		c-20.6-50.7,4.9-123.7-41.2-153.4c-21.1-13.6-47.3-10-73.3-6.9c-23.7,2.7-28.9-32.5-5.4-36.5c60.5-10.3,129.4,18.8,154.7,75.9
@@ -38,37 +38,13 @@
 <script setup>
 import {useI18n} from "vue-i18n";
 import {onMounted, ref} from "vue";
+import {randomInteger} from "@/utls/randomInteger";
 
 const {t} = useI18n()
 
 let i = 0;
-const text = t('In the\n' +
-    '        perspective of the history of art,[10] artistic works have existed for almost as long as humankind: from\n' +
-    '        early prehistoric art to contemporary art; however, some theorists think that the typical concept of\n' +
-    '        "artistic works" does not fit well outside modern Western societies.[11] One early sense of the definition\n' +
-    '        of art is closely related to the older Latin meaning, which roughly translates to "skill" or "craft", as\n' +
-    '        associated with words such as "artisan". English words derived from this meaning include artifact,\n' +
-    '        artificial, artifice, medical arts, and military arts. However, there are many other colloquial uses of the\n' +
-    '        word, all with some relation to its etymology.\n' +
-    '        20th-century bottle, Twa peoples, Rwanda. Artistic works may serve practical functions, in addition to their\n' +
-    '        decorative value.\n' +
-    '        Over time, philosophers like Plato, Aristotle, Socrates and Immanuel Kant, among others, questioned the\n' +
-    '        meaning of art.[12] Several dialogues in Plato tackle questions about art: Socrates says that poetry is\n' +
-    '        inspired by the muses, and is not rational. He speaks approvingly of this, and other forms of divine madness\n' +
-    '        (drunkenness, eroticism, and dreaming) in the Phaedrus (265a–c), and yet in the Republic wants to outlaw\n' +
-    '        Homer\'s great poetic art, and laughter as well. In Ion, Socrates gives no hint of the disapproval of Homer\n' +
-    '        that he expresses in the Republic. The dialogue Ion suggests that Homer\'s Iliad functioned in the ancient\n' +
-    '        Greek world as the Bible does today in the modern Christian world: as divinely inspired literary art that\n' +
-    '        can provide moral guidance, if only it can be properly interpreted.[13]\n' +
-    '\n' +
-    '        With regards to the literary art and the musical arts, Aristotle considered epic poetry, tragedy, comedy,\n' +
-    '        Dithyrambic poetry and music to be mimetic or imitative art, each varying in imitation by medium, object,\n' +
-    '        and manner.[14] For example, music imitates with the media of rhythm and harmony, whereas dance imitates\n' +
-    '        with rhythm alone, and poetry with language. The forms also differ in their object of imitation. Comedy, for\n' +
-    '        instance, is a dramatic imitation of men worse than average; whereas tragedy imitates men slightly better\n' +
-    '        than average. Lastly, the forms differ in their manner of imitation—through narrative or character, through\n' +
-    '        change or no change, and through drama or no drama.[15] Aristotle believed that imitation is natural to\n' +
-    '        mankind and constitutes one of mankind\'s advantages over animals.[16]');
+const textRaw = 'Aš esu kūrėjas, kuris bando suvokti pasaulį ir savo vietą jame. Aš esu svajotojas, kuris trokšta meilės ir grožio. Aš esu fragmentas, konstruktas, simuliacija, žaidimas. Aš esu tekstas, diskursas, naratyvas, meta-naratyvas. Aš esu ženklas, pėdsakas, pakartojimas, hiperrealybė. Aš esu skirtumas, diferenciacija, dekonstrukcija, diseminacija. Aš esu daugiau nei numeris. Aš esu individualybė, kurios negali apibrėžti jokia sistema ar ideologija. Aš esu kūrybiškas, originalus ir neįprastas. Aš esu atviras, lankstus ir mokantis. Aš esu filosofas, kuris klausia savęs apie gyvenimo prasmę ir vertybes. Aš esu namų šeimininkė, kuri neša savo namus ant pečių ir keliauja po pasaulį. Aš esu nakties tamsybių sklaida, dvelkianti nežinomybės ir paslapčių raštais. Aš esu bespalvė akimirka, sugniaužta tarp praeities prisiminimų ir ateities svajonių, žvaigždės šviesa, sklindanti per neregimo dangaus skylę. Aš esu žingsnis į žingsnį prarasdama save tokiose ribose, kurias pati sukūriau, medžiotoja tarp mirusiųjų tautų, pasislėpusi tamsybės vartuose. Aš esu tyla, kurios siužetą niekas nepajėgs iššifruoti, sapno pabudimas, įsikūnijusi neištikimybės plunksna. Aš esu nerimas, kylantis kaip audros banga, nesibaigiantis ir beviltiškai linksmindamasis. Aš esu prasmės ir beprasmybės susikirtimo mėnulis, ragaujantis paradoksų pasaulyje. Aš esu tuštuma, aukštyn kojomis stovinti keliuose, kurių galas nepasiekiamas. Aš esu amžinai ieškanti siela, tinkanti į neegzistuojančių kelių gūžčius. Aš esu tai, kas gimsta ir miršta tarp žodžių ir jų tylėjimo. Aš esu visa tai ir vis dėlto niekas. Aš esu konstrukcijos kirtiklis, drėgnų cemento maišų kepurėje, kurio galūnės pilkos nuo varginančių pastogės skaldų ir monotoniško kasdienybės pelenų. Aš esu mūrininko įrankių šešėlis, besiilsintis tarp plytų eilučių, kurios skambėjo ankstyvo ryto balsu. Aš esu besiliejančiuose akmenyse slypinčių paslapčių šifruotojas. Aš esu menininkas, kurio plaukai nudažyti suskaldyto ilgesio ir prarastos laimės. Aš esu mūro siena, slepianti savo skilimus ir spėjimus, sugebėjusi atlaikyti laiko ir audrų baleto svyravimus. Aš esu betono grindų ritmas, žengiantis žingsnį po žingsnio, laisvės ilgesį sulaikydamas tarp šaltų paminklų. Aš esu pastato širdis, pulsuojanti krauju. Aš esu tai, kas laiko kartu, kas kuria ir kas lieka.'
+const text = t(textRaw);
 const speed = 2;
 const iconText = ref('')
 
@@ -89,28 +65,48 @@ const setFullText = () => {
 }
 
 
-const opacityTrain = () => {
+/*
+* startCoordinates: between 0 and 2200
+* */
+const opacityTrain = (startCoordinates = randomInteger(0, textRaw.length - 200)) => {
   setTimeout(() => {
     const fields = document.getElementById('textMan').getElementsByTagName('tspan')
-    let i = 0
-    console.log(fields.length)
+    let i = startCoordinates
+    let finishCoordinates = 0
+    let finishing = false
     const runTrain = () => {
       if (i < fields.length) {
-        fields[i].setAttribute('style', `opacity: 1`)
-        i += 1
-        if (i > 100) {
-          fields[i - 101].setAttribute('style', `opacity: 0`)
+        if (!finishing) {
+          fields[i].setAttribute('style', `opacity: 1`)
         }
+        if (i > 100) {
+          const fieldas = fields[i - 101]
+          if (fieldas) {
+            if (finishCoordinates === i - 101 && finishing) {
+              i = 3000
+            }
+            fieldas.setAttribute('style', `opacity: 0`)
+          }
+          const tukstantelis = randomInteger(1, 1000)
+          if (tukstantelis === 1) {
+            finishing = true
+            finishCoordinates = i;
+          }
+        }
+        i += 1
         setTimeout(runTrain, 60)
+      } else {
+        opacityTrain()
       }
     }
     runTrain()
-  }, 1000)
+  }, 500)
 }
 
 const initOpacitySnakes = () => {
   opacityTrain()
-  setTimeout(opacityTrain, 25000)
+  opacityTrain()
+  // setTimeout(opacityTrain)
 }
 
 onMounted(() => {

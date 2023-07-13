@@ -45,3 +45,34 @@ text {
 .transition-opacity {
     transition: opacity 1s;
 }
+
+html, body {
+    touch-action: pan-x pan-y;
+}
+
+/**
+ * Remove focus styles for non-keyboard focus.
+ */
+:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+/**
+ * Cross-browser styles for explicit focus via
+ * keyboard-based (eg Tab) navigation or the
+ * .focus-visible utility class.
+ */
+:focus,
+.focus-visible:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+button {
+    @apply hover:opacity-[80%] hover:scale-[115%];
+}
+
+span, p, h1, h2, h3, button, tspan, input {
+    user-select: none; /* Standard syntax */
+}

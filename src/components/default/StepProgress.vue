@@ -10,35 +10,44 @@
     <div class="flex justify-between relative">
       <div class="step-item" :class="{active: modelValue >= 1}">
         <StepOne class="h-full m-auto"/>
-        <div class="text-one opacity-1 transition-opacity" :class="{'opacity-0': modelValue !== 1}">
-          <StandText class="scale-[130%] mt-2 ml-2"/>
-        </div>
+        <span class="text-6xl pt-[5rem] w-[160%] absolute -left-[15%]">
+          {{ t('kakta') }}
+        </span>
+        <!--        <div class="text-one opacity-1 transition-opacity" :class="{'opacity-0': modelValue !== 1}">-->
+        <!--          <StandText class="scale-[130%] mt-2 ml-2"/>-->
+        <!--        </div>-->
       </div>
       <div class="step-item" :class="{active: modelValue >= 2}">
         <StepTwo class="h-full m-auto"/>
+        <span class="text-6xl pt-[5rem] w-[140%] absolute -left-[0%]">
+          {{ t('stand') }}
+        </span>
       </div>
-      <div class="step-item" :class="{active: modelValue >= 3}">
-        <StepThree class="h-full m-auto"/>
-        <div class="text-three opacity-1 transition-opacity" :class="{'opacity-0': modelValue !== 3}">
-          <StepThreeText/>
-          <StayText/>
-        </div>
-      </div>
+      <!--      <div class="step-item" :class="{active: modelValue >= 3}">-->
+      <!--        <StepThree class="h-full m-auto"/>-->
+      <!--        <div class="text-three opacity-1 transition-opacity" :class="{'opacity-0': modelValue !== 3}">-->
+      <!--          <StepThreeText/>-->
+      <!--          <StayText/>-->
+      <!--        </div>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
 <script setup>
+import {ref} from "vue";
+import {useI18n} from "vue-i18n";
 import StepOne from '../../assets/icons/steps/one.svg?component'
 import StepTwo from '../../assets/icons/steps/two.svg?component'
-import StepThree from '../../assets/icons/steps/three.svg?component'
-import StepThreeText from '../../assets/icons/steps/stand_icon.svg?component'
-import {ref} from "vue";
-import StandText from "@/components/steps/StandText.vue";
-import StayText from "@/components/steps/StayText.vue";
+// import StepThree from '../../assets/icons/steps/three.svg?component'
+// import StepThreeText from '../../assets/icons/steps/stand_icon.svg?component'
+// import StandText from "@/components/steps/StandText.vue";
+// import StayText from "@/components/steps/StayText.vue";
 
 defineProps({
   modelValue: Number
 })
+
+const {t} = useI18n()
 
 const emit = defineEmits(['update:modelValue'])
 
@@ -59,12 +68,12 @@ setTimeout(() => {
     emit('update:modelValue', 3)
     progressFast.value = true
     progressWidth.value = 100
-  }, 5000)
-}, 9000)
+  }, 1000)
+}, 7000)
 </script>
 <style scoped>
 .step-item {
-  @apply border border-black p-4 giga:p-12 h-20 w-20 giga:w-[16rem] giga:h-[16rem] rounded-full bg-white relative;
+  @apply border border-black p-4 giga:p-12 h-20 w-20 giga:w-[20rem] giga:h-[20rem] rounded-full bg-white relative;
 }
 
 .step-item.active {

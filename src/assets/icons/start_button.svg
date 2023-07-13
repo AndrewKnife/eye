@@ -12,6 +12,6 @@
                   transform="translate(-31.96 220.36) rotate(-90)"/>
             <line stroke="#000" class="cls-2" x1="90.26" y1="96.12" x2="90.26" y2="92.06"/>
         </g>
-        <circle stroke="#000" class="cls-1" cx="93.89" cy="90.9" r="81.78"/>
+        <circle stroke-width="3" stroke="#000" class="cls-1" cx="93.89" cy="90.9" r="81.78"/>
     </g>
 </svg>

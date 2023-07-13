@@ -10,7 +10,7 @@
         a 37,37 0 1,1 74,0
         a 37,37 0 1,1 -74,0"/>
       </defs>
-      <text font-weight="700" font-family="Telegraf" letter-spacing="5px">
+      <text font-weight="700" font-family="Telegraf" letter-spacing="2px">
         <textPath xlink:href="#circle">
           {{ t('start_button_start')}}
         </textPath>

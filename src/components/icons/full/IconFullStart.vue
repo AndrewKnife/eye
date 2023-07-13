@@ -11,7 +11,7 @@
         a 37,37 0 1,1 74,0
         a 37,37 0 1,1 -74,0"/>
         </defs>
-        <text font-weight="100" font-family="Telegraf" letter-spacing="1px" font-size="5px">
+        <text font-weight="100" font-family="Telegraf" letter-spacing="0.5px" font-size="6px">
           <textPath xlink:href="#circlerainel">
             {{ t('title_start') }}
           </textPath>

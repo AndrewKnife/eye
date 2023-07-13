@@ -1,20 +1,23 @@
 <template>
   <div>
     <div class="w-full h-full flex justify-center items-center flex-col">
-      <div class="w-5/12 h-[34%] relative">
+      <div class="w-5/12 h-[21%] relative">
         <div class="absolute inset-0 flex justify-center items-center font-black">
           <div class="absolute inset-0">
-            <img id="stepImage" :src="stepsImage" class="h-full w-full object-contain"/>
+            <!--            <img id="stepImage" :src="stepsImage" />-->
+            <StepsImage id="stepImage" class="h-full w-full object-contain"/>
           </div>
           <div class="absolute inset-0">
-            <WatchText id="eyeImage" class="opacity-0"/>
+            <!--            <WatchText id="eyeImage" class="opacity-0"/>-->
+            <!--            <img id="eyeImage" :src="stepsStandImage" class="h-full w-full opacity-0 object-contain"/>-->
+            <StepsStandImage id="eyeImage" class="h-full opacity-0 w-full object-contain"/>
           </div>
-          <div class="absolute inset-0">
-            <img id="standImage" :src="stepsStandImage" class="h-full w-full opacity-0 object-contain"/>
-          </div>
+          <!--          <div class="absolute inset-0">-->
+
+          <!--          </div>-->
         </div>
       </div>
-      <div class="w-6/12 mt-[4%]">
+      <div class="w-6/12 mt-[3%] relative px-[5%]">
         <StepProgress v-model="activeCount"/>
       </div>
     </div>
@@ -22,14 +25,17 @@
 </template>
 <script setup lang="ts">
 import {ref, watch} from "vue";
-import stepsImage from "../assets/images/steps_walk.png";
-import stepsStandImage from "../assets/images/steps_Stand.png";
+import StepsImage from "../assets/icons/visos_kojytes-21.svg?component";
+import StepsStandImage from "../assets/icons/kojytes_3-20.svg?component";
+// import stepsStandImage from "../assets/images/steps_Stand.png";
 import StepProgress from "./default/StepProgress.vue";
-import WatchText from "./steps/WatchText.vue";
 
+const props = defineProps({finished: Object})
 const emit = defineEmits(['next'])
 
 const activeCount = ref(1)
+
+const animationFinish = ref(false)
 
 watch(activeCount, () => {
   if (activeCount.value === 2) {
@@ -37,16 +43,23 @@ watch(activeCount, () => {
     if (stepsElement) stepsElement.classList.add('set-invisible')
     const eyeElement = document.getElementById('eyeImage')
     if (eyeElement) eyeElement.classList.add('set-visible')
-  }
-  if (activeCount.value === 3) {
-    const eyeElement = document.getElementById('eyeImage')
-    if (eyeElement) eyeElement.classList.remove('set-visible')
-    if (eyeElement) eyeElement.classList.add('set-invisible')
-    const standElement = document.getElementById('standImage')
-    if (standElement) standElement.classList.add('set-visible')
     setTimeout(() => {
-      emit('next')
-    }, 5000)
+      animationFinish.value = true
+    }, 4500)
+  }
+  // if (activeCount.value === 3) {
+  //   const eyeElement = document.getElementById('eyeImage')
+  //   if (eyeElement) eyeElement.classList.remove('set-visible')
+  //   if (eyeElement) eyeElement.classList.add('set-invisible')
+  //   const standElement = document.getElementById('standImage')
+  //   if (standElement) standElement.classList.add('set-visible')
+  //
+  // }
+})
+
+watch([animationFinish, props], () => {
+  if (animationFinish.value && props.finished) {
+    emit('next')
   }
 })
 </script>

@@ -60,7 +60,7 @@ const iconText = ref('')
 const setFullText = () => {
   let tempText = ''
   for (let character of text) {
-    tempText += `<tspan class="invisible">${character}</tspan>`
+    tempText += `<tspan style="opacity: 0">${character}</tspan>`
   }
   iconText.value = tempText
 }
@@ -70,52 +70,40 @@ const setFullText = () => {
 * startCoordinates: between 0 and 2200
 * */
 const opacityTrain = (startCoordinates = randomInteger(0, textRaw.length - 200)) => {
-  const fields = document.getElementById('textMan').getElementsByTagName('tspan');
-  let i = startCoordinates;
-  let finishCoordinates = 0;
-  let finishing = false;
-  let lastTime = null;
-  const delay = 60;
-
-  const runTrain = (timestamp) => {
-    if (!lastTime) {
-      lastTime = timestamp;
-    }
-
-    const elapsed = timestamp - lastTime;
-    if (elapsed >= delay) {
-      lastTime = timestamp;
-
+  setTimeout(() => {
+    const fields = document.getElementById('textMan').getElementsByTagName('tspan')
+    let i = startCoordinates
+    let finishCoordinates = 0
+    let finishing = false
+    const runTrain = () => {
       if (i < fields.length) {
         if (!finishing) {
-          fields[i].classList.add('invisible');
+          fields[i].setAttribute('style', `opacity: 1`)
         }
         if (i > 100) {
-          const fieldas = fields[i - 101];
-          if (finishCoordinates === i - 101 && finishing) {
-            i = 3000;
-          }
+          const fieldas = fields[i - 101]
           if (fieldas) {
-            fieldas.classList.remove('invisible');
+            if (finishCoordinates === i - 101 && finishing) {
+              i = 3000
+            }
+            fieldas.setAttribute('style', `opacity: 0`)
           }
-          const tukstantelis = randomInteger(1, 1000);
+          const tukstantelis = randomInteger(1, 1000)
           if (tukstantelis === 1) {
-            finishing = true;
+            finishing = true
             finishCoordinates = i;
           }
         }
-        i += 1;
+        i += 1
+        setTimeout(runTrain, 65 + props.slower)
       } else {
-        opacityTrain();
-        return;
+        opacityTrain()
       }
     }
+    runTrain()
+  }, 500)
+}
 
-    requestAnimationFrame(runTrain);
-  };
-
-  requestAnimationFrame(runTrain);
-};
 const initOpacitySnakes = () => {
   opacityTrain()
   opacityTrain()

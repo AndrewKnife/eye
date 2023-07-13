@@ -16,12 +16,13 @@
       <PointButton @click="$emit('information')" class="px-5">
         {{ t('start_button_information') }}
       </PointButton>
+      <!--      <span class="opacity-0 w-[300px]">-</span>-->
       <PointButton @click="handleLTClick" class="px-5">
         {{ t('start_button_lt') }}
       </PointButton>
-      <!--      <PointButton @click="handleENClick" class="px-5">-->
-      <!--        {{ t('start_button_en') }}-->
-      <!--      </PointButton>-->
+      <PointButton @click="handleENClick" class="px-5">
+        {{ t('start_button_en') }}
+      </PointButton>
     </div>
   </div>
 </template>

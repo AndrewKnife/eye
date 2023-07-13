@@ -10,32 +10,36 @@
         <InformationComponent class="perfect-center" v-if="activeTab === TAB_KEYS.information"
                               @back="() => blinkEye(TAB_KEYS.start)"/>
         <AgeComponent class="perfect-center" v-if="activeTab === TAB_KEYS.age"
-                      @back="() => blinkEye(TAB_KEYS.start)"
-                      @next="handleTermsNavigation"
-                      v-model="ageAgreement"/>
+                      @back="() => handleTermsNavigation(false)"
+                      @next="() => handleTermsNavigation(true)"/>
         <TermsOfServiceParent class="perfect-center" v-if="activeTab === TAB_KEYS.termsParent"
-                              @back="() => blinkEye(TAB_KEYS.age)"
+                              @back="() => blinkEye(TAB_KEYS.start)"
                               @next="() => blinkEye(TAB_KEYS.terms)"/>
         <TermsOfService class="perfect-center" v-if="activeTab === TAB_KEYS.terms"
-                        @back="() => blinkEye(TAB_KEYS.age)"
-                        @next="() => blinkEye(TAB_KEYS.steps)"/>
-        <StepsComponent class="perfect-center" v-if="activeTab === TAB_KEYS.steps"
-                        @next="() => blinkEye(TAB_KEYS.scanner)"/>
+                        @back="() => blinkEye(TAB_KEYS.start)"
+                        @next="() => blinkAndScan(TAB_KEYS.steps)"/>
+        <StepsComponent class="perfect-center" v-if="activeTab === TAB_KEYS.steps" :finished="finishedCalling"
+                        @next="handleGoToScanner"/>
         <ScannerComponent class="perfect-center" v-if="activeTab === TAB_KEYS.scanner"
                           @next="() => blinkEye(TAB_KEYS.haiku)"/>
         <HaikuComponent class="perfect-center" v-if="activeTab === TAB_KEYS.haiku" :image-source="userEyes"
+                        @print="triggerPrinter" :has-printed="hasPrinted"
                         @repeat="() => blinkEye(TAB_KEYS.start)" @next="() => blinkEye(TAB_KEYS.haikuMap)"/>
         <HaikuMapComponent class="perfect-center" v-if="activeTab === TAB_KEYS.haikuMap" :haiku-map="userHaiku"
                            @repeat="() => blinkEye(TAB_KEYS.start)" @back="() => blinkEye(TAB_KEYS.haiku)"/>
       </div>
     </div>
+    <audio v-if="finishedCalling" autoplay>
+      <source :src="sounds" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
     <div v-if="textBgActive" class="absolute inset-0 overflow-hidden anim-opacity">
-      <TextBackground class="w-full"/>
+      <TextBackground class="w-full" :slower="slowerSpeed"/>
     </div>
   </div>
 </template>
 <script setup>
-import {computed, ref, watch} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 import {useI18n} from "vue-i18n";
 import axios from "axios";
 import StartComponent from "@/components/StartComponent.vue";
@@ -48,8 +52,11 @@ import TextBackground from "@/components/icons/TextBackground.vue";
 import AgeComponent from "@/components/AgeComponent.vue";
 import TermsOfServiceParent from "@/components/TermsOfServiceParent.vue";
 import HaikuMapComponent from "@/components/HaikuMapComponent.vue";
+import sounds from "./assets/soundsound.wav";
 
 const {t, locale} = useI18n()
+
+const slowerSpeed = ref(0)
 
 const TAB_KEYS = {
   start: 'start',
@@ -65,9 +72,10 @@ const TAB_KEYS = {
 
 const activeTab = ref(TAB_KEYS.start)
 
-const ageAgreement = ref('')
 const userEyes = ref('')
+const finishedCalling = ref(true)
 const userHaiku = ref([])
+const hasPrinted = ref(false)
 
 const rotationX = ref(0)
 
@@ -79,19 +87,23 @@ const blinkEye = (nextPage) => {
       rotationX.value = 0;
     }, 100)
   }, 100)
+  if (nextPage === TAB_KEYS.haikuMap) {
+    slowerSpeed.value = 110
+  } else {
+    slowerSpeed.value = 0
+  }
+  if (nextPage === TAB_KEYS.start) {
+    hasPrinted.value = false
+  }
 }
 
 const blinkAndScan = (nextPage) => {
   blinkEye(nextPage)
-  triggerScanner()
+  setTimeout(triggerScanner, 0)
 }
 
-const handleTermsNavigation = () => {
-  if (ageAgreement.value === 'yes') {
-    blinkAndScan(TAB_KEYS.terms)
-  } else {
-    blinkAndScan(TAB_KEYS.termsParent)
-  }
+const handleTermsNavigation = (hasAge) => {
+  blinkEye(hasAge ? TAB_KEYS.terms : TAB_KEYS.termsParent)
 }
 
 const toggleTab = (tabKey) => {
@@ -109,25 +121,55 @@ let timer = null;
 
 watch(activeTab, () => {
   if (activeTab.value === TAB_KEYS.start) {
-    timer = setInterval(starterBlink, 6500)
+    timer = setInterval(starterBlink, 25000)
   } else {
     clearInterval(timer)
   }
 }, {immediate: true})
 
+const handleGoToScanner = () => {
+  if (userEyes.value) {
+    blinkEye(TAB_KEYS.scanner)
+  } else {
+    blinkEye(TAB_KEYS.start)
+  }
+}
+
 const triggerScanner = () => {
+  finishedCalling.value = false
   axios.post('http://127.0.0.1:5000/button-pressed', {
     locale: locale.value
   }).then((res) => {
-    if (res.data.hasOwnProperty('image_path')) {
-      userEyes.value = res.data.image_path
+    if (res.data.hasOwnProperty('success') && res.data.success) {
+      if (res.data.hasOwnProperty('image_path')) {
+        userEyes.value = res.data.image_path
+      }
+      if (res.data.hasOwnProperty('haiku')) {
+        userHaiku.value = res.data.haiku
+      }
+    } else {
+      userEyes.value = ''
+      userHaiku.value = []
     }
-    if (res.data.hasOwnProperty('haiku')) {
-      userHaiku.value = res.data.haiku
-    }
+  }).catch(() => {
+    userEyes.value = ''
+    userHaiku.value = []
+  }).finally(() => {
+    finishedCalling.value = true
   })
   // userEyes.value = 'https://upload.wikimedia.org/wikipedia/commons/8/8f/Human_eye_with_blood_vessels.jpg'
 }
+
+const triggerPrinter = () => {
+  hasPrinted.value = true
+  axios.post('http://127.0.0.1:5000/print')
+}
+
+onMounted(() => {
+  addEventListener("contextmenu", (event) => {
+    return false;
+  });
+})
 </script>
 <style scoped>
 .ovalinator {
@@ -166,7 +208,7 @@ const triggerScanner = () => {
   33% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
   }
 }
